@@ -4,11 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,21 +15,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayList<Song> songs = new ArrayList<Song>();
-        songs.add(new Song("Done for Me", "Charlie Puth ft. Kehlani"));
-        songs.add(new Song("Dark Spring", "Beach House"));
-        songs.add(new Song("Sleep", "Hatchie"));
-        songs.add(new Song("Beyond", "Leon Bridges"));
-        songs.add(new Song("Close", "Rae Sremmurd ft. Travis Scott"));
-        songs.add(new Song("4Ever", "Clairo"));
-        songs.add(new Song("Out of Focus", "The Ramona Flowers"));
-        songs.add(new Song("Hands on Me", "BURNS, Maluma, Rae Sremmurd"));
-        songs.add(new Song("Noisy Heaven", "Quiet Slang"));
-        songs.add(new Song("Miracle", "Chvrches"));
+        Button next = (Button) findViewById(R.id.track);
+
+        next.setOnClickListener(new OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Intent tracks = new Intent(MainActivity.this, TrackList.class);
+
+                // Start the new activity
+                startActivity(tracks);
+            }
+        });
 
 
-        SongListAdapter adapter = new SongListAdapter(this, songs);
-        ListView listView = (ListView) findViewById(R.id.list);
-        listView.setAdapter(adapter);
+        Button viewSong = (Button) findViewById(R.id.song);
+
+        next.setOnClickListener(new OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Intent player = new Intent(MainActivity.this, PlayerActivity.class);
+
+                // Start the new activity
+                startActivity(player);
+            }
+        });
+
     }
 }
