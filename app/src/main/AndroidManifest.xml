@@ -19,6 +19,7 @@
 
         <activity
             android:name=".TrackList"
+            android:label="@string/track_list"
             android:parentActivityName=".MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
@@ -27,6 +28,7 @@
         </activity>
 
         <activity
+            android:label="@string/player_title"
             android:name=".PlayerActivity"
             android:parentActivityName=".MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->

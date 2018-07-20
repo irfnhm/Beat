@@ -23,6 +23,6 @@
     <dimen name="artist_tag_left_margin">120dp</dimen>
     <dimen name="progress_bar_width">350dp</dimen>
     <dimen name="progress_bar_height">20dp</dimen>
-    <dimen name="progress_bar_left_margin">18dp</dimen>
+    <dimen name="progress_bar_left_margin">14dp</dimen>
     <dimen name="progress_bar_top_margin">20dp</dimen>
 </resources>
