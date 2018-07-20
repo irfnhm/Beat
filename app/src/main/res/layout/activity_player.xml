@@ -66,6 +66,8 @@
             android:background="@drawable/previous" />
 
         <Button
+            android:id="@+id/playState"
+            android:onClick="changeState"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="@dimen/player_control_dimensions"
             android:layout_height="@dimen/player_control_dimensions"
