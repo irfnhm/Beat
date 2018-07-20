@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Beat</string>
+    <string name="track_list">Track List</string>
+    <string name="player_title">Now Playing</string>
+    <string name="track_screen">Music Library</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="song_name">Done for me</string>
+    <string name="artist_name">Charlie Puth ft. Kehlani</string>
 </resources>

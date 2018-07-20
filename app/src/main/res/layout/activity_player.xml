@@ -1,18 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_vertical"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="contentDescription">
 
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/player_icon_dimensions"
+        android:layout_height="@dimen/player_icon_dimensions"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/player_icon_margins"
+        android:layout_marginTop="@dimen/player_icon_margins"
+        android:background="@drawable/player_icon_view"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/song_icon" />
+        android:layout_marginLeft="@dimen/song_tag_left_margin"
+        android:layout_marginStart="@dimen/song_tag_left_margin"
+        android:text="@string/song_name"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/song_name_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/artist_tag_left_margin"
+        android:layout_marginStart="@dimen/artist_tag_left_margin"
+        android:text="@string/artist_name"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/artist_name_text_size" />
 
     <ProgressBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="@dimen/progress_bar_width"
+        android:layout_height="@dimen/progress_bar_height"
+        android:layout_marginBottom="@dimen/progress_bar_top_margin"
+        android:layout_marginLeft="@dimen/progress_bar_left_margin"
+        android:layout_marginStart="@dimen/progress_bar_left_margin"
+        android:layout_marginTop="@dimen/progress_bar_top_margin" />
 
     <!--Forward, pause and backward-->
     <LinearLayout
@@ -21,31 +50,44 @@
         android:orientation="horizontal">
 
         <Button
-            android:background="@drawable/repeat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/player_control_dimensions"
+            android:layout_height="@dimen/player_control_dimensions"
+            android:layout_marginLeft="@dimen/thirty_dp"
+            android:layout_marginStart="@dimen/thirty_dp"
+            android:background="@drawable/repeat" />
 
         <Button
-            android:background="@drawable/previous"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/player_control_dimensions"
+            android:layout_height="@dimen/player_control_dimensions"
+            android:layout_marginLeft="@dimen/thirty_dp"
+            android:layout_marginStart="@dimen/thirty_dp"
+            android:background="@drawable/previous" />
 
         <Button
-            android:background="@drawable/play"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/player_control_dimensions"
+            android:layout_height="@dimen/player_control_dimensions"
+            android:layout_marginLeft="@dimen/thirty_dp"
+            android:layout_marginStart="@dimen/thirty_dp"
+            android:background="@drawable/play" />
 
         <Button
-            android:background="@drawable/next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/player_control_dimensions"
+            android:layout_height="@dimen/player_control_dimensions"
+            android:layout_marginLeft="@dimen/thirty_dp"
+            android:layout_marginStart="@dimen/thirty_dp"
+            android:background="@drawable/next" />
 
         <Button
-            android:background="@drawable/shufle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/player_control_dimensions"
+            android:layout_height="@dimen/player_control_dimensions"
+            android:layout_marginLeft="@dimen/thirty_dp"
+            android:layout_marginStart="@dimen/thirty_dp"
+            android:background="@drawable/shufle" />
     </LinearLayout>
 
 </LinearLayout>

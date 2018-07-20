@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -15,24 +15,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button next = (Button) findViewById(R.id.track);
+        TextView musicLibray = (TextView) findViewById(R.id.goto_library);
 
-        next.setOnClickListener(new OnClickListener() {
+        musicLibray.setOnClickListener(new OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link NumbersActivity}
-                Intent tracks = new Intent(MainActivity.this, TrackList.class);
+                Intent library = new Intent(MainActivity.this, TrackList.class);
 
                 // Start the new activity
-                startActivity(tracks);
+                startActivity(library);
             }
         });
 
 
-        Button viewSong = (Button) findViewById(R.id.song);
+        TextView nowPlaying = (TextView) findViewById(R.id.goto_player);
 
-        next.setOnClickListener(new OnClickListener() {
+        nowPlaying.setOnClickListener(new OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
             @Override
             public void onClick(View view) {
